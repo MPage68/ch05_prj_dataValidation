@@ -20,22 +20,18 @@ public class DataValidation {
 		while (choice.equalsIgnoreCase("y")) {
 
 			// user input
-			System.out.print("Enter length:\t");
-			length = sc.nextDouble();
-			System.out.print("Enter width:\t");
+			length = Console.getDouble("Enter length:\t");
 			// logic
-			width = sc.nextDouble();
+			width = Console.getDouble("Enter width:\t");
 			area = (length * width);
 			perimeter = (2 * width + 2 * length);
 			// user output
 			System.out.println("Area:\t        " + area + "\n" + "Perimeter:\t" + perimeter);
 			// validation
 			choice = Console.getString("Continue(y/n)?  ", "y", "n");
-
 		}
 		// Goodbye statement/scanner close
 		System.out.println("Goodbye");
 		sc.close();
 	}
-
 }
